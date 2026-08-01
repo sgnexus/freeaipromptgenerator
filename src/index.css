@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-body-family, 'Inter', sans-serif);
+  --font-heading: var(--font-heading-family, 'Outfit', sans-serif);
+  --font-mono: 'Fira Code', monospace;
+}
+
+:root {
+  --color-primary: #8b5cf6; /* default purple */
+  --color-secondary: #3b82f6; /* default blue */
+  --color-accent: #f43f5e; /* default rose */
+  --color-bg-base: #fafafa;
+  --color-text-base: #1f2937;
+  
+  --font-heading-family: 'Outfit';
+  --font-body-family: 'Inter';
+  
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.4);
+}
+
+/* Theme Classes dynamically controlled by Customizer */
+body {
+  font-family: var(--font-body-family, 'Inter', sans-serif);
+  background-color: var(--color-bg-base);
+  color: var(--color-text-base);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading-family, 'Outfit', sans-serif);
+}
+
+.custom-font-heading {
+  font-family: var(--font-heading-family, 'Outfit', sans-serif) !important;
+}
+
+.custom-font-body {
+  font-family: var(--font-body-family, 'Inter', sans-serif) !important;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}

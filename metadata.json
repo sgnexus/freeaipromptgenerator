@@ -1,0 +1,8 @@
+{
+  "name": "Free AI Prompt Generator",
+  "description": "An interactive, feature-rich hub for creating, optimizing, and managing prompts for various AI models, complete with real-time Gemini AI-powered prompt optimization and customizable UI styles.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
